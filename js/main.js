@@ -33,3 +33,29 @@ function saveData() {
 function loadData() {
     return localStorage.hasOwnProperty(MOBILE)? JSON.parse(localStorage.getItem(MOBILE)): [];
 }
+
+function edit(index) {
+    let mobile = store.getMobileByIndex(index);
+    document.getElementById('edit-name').value = mobile.name;
+    document.getElementById('edit-price').value = mobile.price;
+    document.getElementById('edit-color').value = mobile.color;
+    document.getElementById('edit-status').value = mobile.status;
+    document.getElementById('edit-category').value = mobile.category;
+    document.getElementById('edit-desc').value = mobile.desc;
+    document.getElementById('edit-img').value = mobile.img;
+    currentMobile = index;
+}
+
+function editMobile() {
+    let name = document.getElementById("edit-name").value;
+    let price = document.getElementById("edit-price").value;
+    let color = document.getElementById("edit-color").value;
+    let status = document.getElementById("edit-status").value;
+    let category = document.getElementById("edit-category").value;
+    let desc = document.getElementById("edit-desc").value;
+    let img = document.getElementById("edit-img").value;
+    store.mobiles[currentMobile].edit(name,price,color,status,category,desc);
+    store.mobiles[currentMobile].img = img;
+    display(store.getHtml());
+    document.getElementById('form-edit').reset();
+}
