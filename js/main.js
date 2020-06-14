@@ -58,4 +58,9 @@ function editMobile() {
     store.mobiles[currentMobile].img = img;
     display(store.getHtml());
     document.getElementById('form-edit').reset();
+} 
+
+function del(index) {
+    store.deleteMobile(index);
+    display(store.getHtml());
 }
