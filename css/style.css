@@ -1,0 +1,20 @@
+table, tr, th, td {
+    border: 1px solid #dbdbdb;
+    vertical-align: middle !important;
+    text-align: center;
+}
+
+input {
+    margin-bottom: 10px;
+}
+img {
+    width: 50px;
+}
+
+td:first-child {
+    padding: 5px!important;
+}
+
+.form-group {
+    width: 100%;
+}
