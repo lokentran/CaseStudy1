@@ -43,5 +43,10 @@ class MobileManage {
 
     getMobileByIndex(index){
         return this.mobiles[index];
-    }  
+    }
+    
+    deleteMobile(index){
+        this.mobiles.splice(index,1);
+    }
+    
 }    
