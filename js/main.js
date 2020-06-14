@@ -61,6 +61,10 @@ function editMobile() {
 } 
 
 function del(index) {
-    store.deleteMobile(index);
-    display(store.getHtml());
+    let confirmDel = confirm("Are you sure?");
+    if(confirmDel) {
+        store.deleteMobile(index);
+        display(store.getHtml());
+    }
+
 }
