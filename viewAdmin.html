@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <form id="form-add" class="form-group">
+        <fieldset>
+            <legend>ADD MOBILE</legend>
+            <input class="form-control" id="mobile-name" placeholder="Mobile Name">
+            <input class="form-control" id="mobile-price" placeholder="Mobile Price">
+            <input class="form-control" id="mobile-color" placeholder="Mobile Color">
+            <input class="form-control" id="mobile-status" placeholder="Mobile Status">
+            <input class="form-control" id="mobile-category" placeholder="Mobile Category">
+            <input class="form-control" id="mobile-desc" placeholder="Mobile Description">
+            <input class="form-control" id="mobile-img" placeholder="Mobile Images">
+    
+            <button type="button" class="btn btn-success" onclick="addMobile()">Add</button>
+        </fieldset>
+    </form>  
+    
+    <div id="mobile-manage"></div>
+</div>
+
+<script src="js/Mobile.js"></script>    
+<script src="js/MobileManage.js"></script>    
+<script src="js/main.js"></script>    
+</body>
+</html>
