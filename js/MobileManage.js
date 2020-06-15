@@ -35,6 +35,13 @@ class MobileManage {
         table+=`</table>`;
         return table;
     }
+    getHtmlViewUser(){
+        let table = ``;
+        for (let i = 0; i < this.mobiles.length; i++) {
+            table += "<div class='col-md-3 text-center'>"+this.mobiles[i].getHtmlViewUser() + '</div>';
+        }
+        return table;
+    }
     getAction(index){
         let action = `<td><button class="btn btn-warning" onclick="edit(${index})" data-toggle="modal" data-target="#myModal">Edit</button></td>
                         <td><button class="btn btn-danger" onclick="del(${index})">Delete</button></td>`;
@@ -49,5 +56,8 @@ class MobileManage {
         
         this.mobiles.splice(index,1);
     }
+    
+
+
     
 }    
