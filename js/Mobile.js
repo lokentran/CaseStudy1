@@ -1,5 +1,5 @@
 class Mobile {
-    constructor(name, price, color, status, category, desc) {
+    constructor(img,name, price, color, status, category, desc) {
         this.name = name;
         this.price = price;
         this.color = color;
@@ -8,14 +8,14 @@ class Mobile {
         this.category = category;
         this.img = 'mobile_icon.png';
     }
-    edit(name, price, color, status, category, desc){
+    edit(img,name, price, color, status, category, desc){
         this.name = name;
         this.price = price;
         this.color = color;
         this.status = status;
         this.category = category;
         this.desc = desc;
-
+        this.img = img;
     }
     getHtml(){
         let html = `<td><img src="${this.img}"></td>

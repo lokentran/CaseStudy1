@@ -1,7 +1,7 @@
 const MOBILE = "mobile";
 let store = new MobileManage("Tung Store");
 store.data = loadData();
-console.log(store.data);
+// console.log(store.data);
 store.init();
 display(store.getHtml());
 console.log(store.mobiles);
@@ -19,8 +19,7 @@ function addMobile() {
     let category = document.getElementById("mobile-category").value;
     let desc = document.getElementById("mobile-desc").value;
     let img = document.getElementById("mobile-img").value;
-    let mobile = new Mobile(name,price,color,status,category,desc);
-    mobile.img = img;
+    let mobile = new Mobile(img,name,price,color,status,category,desc);
     store.addMobile(mobile);
     display(store.getHtml());
     document.getElementById('form-add').reset();
@@ -54,8 +53,8 @@ function editMobile() {
     let category = document.getElementById("edit-category").value;
     let desc = document.getElementById("edit-desc").value;
     let img = document.getElementById("edit-img").value;
-    store.mobiles[currentMobile].edit(name,price,color,status,category,desc);
-    store.mobiles[currentMobile].img = img;
+    store.mobiles[currentMobile].edit(img,name,price,color,status,category,desc);
+    // store.mobiles[currentMobile].img = img;
     display(store.getHtml());
     document.getElementById('form-edit').reset();
 } 
