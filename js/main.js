@@ -20,9 +20,15 @@ function addMobile() {
     let desc = document.getElementById("mobile-desc").value;
     let img = document.getElementById("mobile-img").value;
     let mobile = new Mobile(img,name,price,color,status,category,desc);
-    store.addMobile(mobile);
-    display(store.getHtml());
-    document.getElementById('form-add').reset();
+    if((name != '') && (price != '') && (img != '')) {
+        store.addMobile(mobile);
+        display(store.getHtml());
+        document.getElementById('form-add').reset();
+
+    } else {
+        alert('Bạn không được để rỗng: mobile name, mobile price , mobile image');
+    }
+ 
 }
 
 function saveData() {
